@@ -9,11 +9,11 @@ Project to Demo Automation for Starting &amp; Stopping the Instances through Lam
   "Action": [
         "logs:CreateLogGroup",
         "logs:CreateLogStream",
-        "logs:PutLogEvents"
+        "logs:PutLogEvents" ]
 
   "Action": [
         "ec2:Start*",
-        "ec2:Stop*"
+        "ec2:Stop*"  ]
         
 * Role Creation (aws_iam_role):
 "Action": "sts:AssumeRole",
@@ -24,7 +24,7 @@ Project to Demo Automation for Starting &amp; Stopping the Instances through Lam
 
 ======================================================================================================================================
 
-2.    #Create Lambda functions that stop and start your EC2 instances.
+2.  Create Lambda functions that stop and start your EC2 instances.
 *  Refer Lambda.tf
 * aws_lambda_function for both StopEC2Instances & StartEC2Instances
 
@@ -33,6 +33,9 @@ Project to Demo Automation for Starting &amp; Stopping the Instances through Lam
 ======================================================================================================================================
 
 3.    #Create CloudWatch Events rules that trigger your function on a schedule. For example, you could create a rule to stop your EC2 instances at night, and another to start them again in the morning.
-->  
+*  Refer CloudWatch.tf
+* aws_cloudwatch_event_rule
+* aws_cloudwatch_event_target
+* aws_lambda_permission
 
 ======================================================================================================================================
