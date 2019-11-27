@@ -1,4 +1,4 @@
-# Lambda_Test
+# Lambda_Automation Through Terraform
 Project to Demo Automation for Starting &amp; Stopping the Instances through Lambda, CloudWatch &amp; IAM
 
 # For this setup, do the following:
